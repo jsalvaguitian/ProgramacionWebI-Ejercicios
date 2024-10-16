@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+section{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1, .section2{
+    background-color: rgb(133, 189, 133);
+}
+
+.section3, .section4{
+    background-color: rgb(230, 230, 98);
+}
+
+.section5{
+    background-color: rgb(247, 133, 133);
+}
+
+.section6{
+    background-color: rgb(102, 176, 236);
+}
+/*RESPONSIVE*/
+
+@media screen and (max-width:425px) {
+    main{
+        display: grid;
+        grid-template-areas: "primero primero"
+                            "segundo segundo"
+                            "tercero cuarto"
+                            "quinto quinto"
+                            "sexto sexto"
+
+        
+    }
+
+    .section1{
+        grid-area: sexto;
+        background-color: rgb(114, 204, 114);
+        height: calc(100vh/7);
+
+    }
+
+    .section2{
+        grid-area: quinto;
+        background-color: rgb(114, 204, 114);
+        height: calc(100vh/7);
+    }
+
+    .section3{
+        grid-area: tercero;
+        background-color: rgb(235, 235, 115);
+        height: calc(100vh/4.9);
+
+    }
+
+    .section4{
+        grid-area: cuarto;
+        background-color: rgb(245, 245, 121);
+        height: calc(100vh/4.9);
+    }
+
+    .section5{
+        grid-area: segundo;
+        background-color: rgb(127, 167, 219);
+        height: calc(100vh/4);
+    }
+
+    .section6{
+        grid-area: primero;
+        background-color: rgb(228, 128, 128);
+        height: calc(100vh/4);
+
+    }
+}

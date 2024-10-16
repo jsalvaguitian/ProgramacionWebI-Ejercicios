@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+main{
+    height: 100vh;
+}
+
+.section1{
+    height: 60%;
+    display: grid;
+    grid-template-areas: "uno dos cuatro"
+                        "uno tres cuatro"
+}
+
+.item1{
+    grid-area: uno;
+}
+
+.item2{
+    grid-area: dos;
+}
+
+.item3{
+    grid-area: tres;
+}
+
+.item4{
+    grid-area: cuatro;
+}
+
+.item1, .item4, .item2, .item3{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2{
+    display: flex;
+    height: 40%;
+
+}
+
+.item5, .item6{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1, .item4{
+    background-color: rgb(155, 247, 155);
+}
+
+.item2, .item3{
+    background-color: rgb(218, 218, 89);
+}
+
+.item5{
+    background-color: rgb(231, 91, 91);
+}
+
+.item6{
+    background-color: rgb(0, 255, 200);
+}
+
+/*responsive tablet*/
+@media screen and (max-width:768px) and (min-width:426px){
+    main{
+        height: 100vh;
+    }
+
+    .section1{
+        width: 100%;
+        display: grid;
+        grid-template-areas: "uno dos"
+                            "tres cuatro";
+    }
+
+    /*como hacer que el ancho sea mayor para 1, 3, 5*/    
+}
+
+@media screen and (max-width:425px) {
+    .section1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item1, .item2, .item3, .item4, .item5, .item6{
+        height:100%;
+    }
+
+    .section2{
+        display: flex;
+        flex-direction: column;
+    }
+        /*como hacer que el alto de todos los items sean iguales*/    
+}
+
